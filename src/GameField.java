@@ -66,6 +66,7 @@ public class GameField extends JPanel implements ActionListener{
         ImageIcon iid = new ImageIcon("dot.png");
         dot = iid.getImage();
         s.loadImages();
+        b.loadImages();
     }
 
     @Override
@@ -73,8 +74,8 @@ public class GameField extends JPanel implements ActionListener{
         super.paintComponent(g);
         if(inGame) {
             g.drawImage(food, foodX, foodY, this);
-
             s.paintComponent(g);
+            b.paintComponent(g);
 
             for (int i = 0; i < dots; i++) {
                 if (x[0] == foodX && y[0] == foodY) {
@@ -195,6 +196,8 @@ public class GameField extends JPanel implements ActionListener{
                 inGame = false;
             }
             createFood();
+            b.createBonusSlow();
+            b.createBonusShort();
         }
     }
 
