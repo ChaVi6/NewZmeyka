@@ -16,13 +16,11 @@ public class Stones extends JPanel {
     public int[] x = new int[GameField.MAX_DOTS];
     public int[] y = new int[GameField.MAX_DOTS];
 
-
     public Stones() {
         createStones();
         loadImages();
         checkStones();
     }
-
 
     public void createStones() {
         stone1X = new Random().nextInt(21) * GameField.DOT_SIZE;

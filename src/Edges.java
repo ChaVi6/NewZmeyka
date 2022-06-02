@@ -7,13 +7,6 @@ public class Edges {
 
     public Edges() {
         checkEdges();
-        fun();
-    }
-
-    public void fun() {
-        if (dots == 5) {
-            dots = 10;
-        }
     }
 
     public void checkEdges() {
